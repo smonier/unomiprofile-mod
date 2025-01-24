@@ -4,8 +4,8 @@
 <profilnt = 'http://www.jahia.org/unomiProfile/nt/1.0'>
 <profilmix = 'http://www.jahia.org/unomiProfile/mix/1.0'>
 
-
 [profilmix:profileComponents] > jmix:droppableContent, jmix:editorialContent mixin
 
 [profilnt:profileCard] > jnt:content, mix:title, profilmix:profileComponents
-- unomiProperties (string, choicelist[ProfilePropertiesInitializer,resourceBundle]) multiple indexed=no
+ - unomiProperties (string, choicelist[ProfilePropertiesInitializer,resourceBundle]) multiple indexed=no
+ - layout(string, choicelist[resourceBundle]) = 'card' mandatory < card, tabs

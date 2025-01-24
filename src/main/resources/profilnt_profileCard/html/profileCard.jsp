@@ -18,6 +18,7 @@
 
 
 <jcr:nodeProperty node="${currentNode}" name="unomiProperties" var="unomiProperties"/>
+<jcr:nodeProperty node="${currentNode}" name="layout" var="layout"/>
 
 <c:set var="_uuid_" value="${currentNode.identifier}"/>
 <c:set var="language" value="${currentResource.locale.language}"/>
@@ -42,6 +43,7 @@
         scope: "${site}", // Site key
         locale: "${language}",
         unomiProfileWidgetId: "${_uuid_}",
+        layout: "${layout}",
         gqlServerUrl: "${host}/modules/graphql",
         contextServerUrl: window.digitalData ? window.digitalData.contextServerPublicUrl : undefined, // digitalData is set in live mode only
 
