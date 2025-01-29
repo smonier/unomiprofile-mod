@@ -13,7 +13,7 @@
 
 <%--Add files used by the webapp--%>
 <template:addResources type="css" resources="webapp/${requestScope.webappCssFileName}" media="screen"/>
-<template:addResources type="css" resources="unomiProfile-overrides.css"/>
+<template:addResources type="css" resources="profile-overrides.css"/>
 <template:addResources type="javascript" resources="webapp/${requestScope.webappJsFileName}"/>
 
 

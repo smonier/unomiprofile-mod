@@ -9,3 +9,4 @@
 [profilnt:profileCard] > jnt:content, mix:title, profilmix:profileComponents
  - unomiProperties (string, choicelist[ProfilePropertiesInitializer,resourceBundle]) multiple indexed=no
  - layout(string, choicelist[resourceBundle]) = 'card' mandatory < card, tabs
+ - formatedProperties (string, richtext) hidden

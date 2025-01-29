@@ -1,0 +1,23 @@
+package org.jahia.se.modules.unomiProfile.rules;
+
+// List any import classes here
+import org.jahia.se.modules.unomiProfile.rules.ProfileService;
+import org.jahia.services.content.rules.*
+import org.jahia.services.content.*
+import javax.jcr.observation.Event
+import org.slf4j.Logger
+
+// Declare any global variables here
+global ProfileService profileService;
+global Logger logger;
+
+
+rule "Format unomiProperties"
+    when
+        A property unomiProperties has been set on a node
+            - the node has the type profilnt:profileCard
+    then
+        Log "------ CHANGE IN UNOMI PROPERTIES ---------"
+        Log "unomiProperties has changed on " + node.getPath() + ". Formatting and storing properties."
+        >       profileService.formatAndSaveProperties(node.getNode());
+end

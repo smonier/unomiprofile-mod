@@ -1,0 +1,15 @@
+{
+  "name": "profilnt:profileCard",
+  "fields": [
+    {
+      "name": "formatedProperties",
+      "selectorType": "CodeMirror",
+      "selectorOptions":[
+        {
+          "name": "mode",
+          "value" : "javascript"
+        }
+      ]
+    }
+  ]
+}
